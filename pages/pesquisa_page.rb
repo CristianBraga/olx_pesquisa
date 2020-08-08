@@ -44,14 +44,14 @@ class PesquisaPage
   end
 
   def setar_aba_em_uso
-    sleep(10)
+    sleep(5)
     @browser.window_handles.each do |handle|
       if handle != @original_window
         @browser.switch_to.window handle
           break
       end
     end
-    sleep(10)
+    sleep(5)
   end
 
   def gravar_tela
